@@ -12,8 +12,8 @@ def sendToEcho3D():
     }
     try:
         files = [
-            ('file_model', ('ohforfeckssake.obj', open('ohforfeckssake.obj', 'rb'), 'application/obj')),
-            ('file_model', ('ohforfeckssake.mtl', open('ohforfeckssake.mtl', 'rb'), 'application/mtl'))
+            ('file_model', ('graph.obj', open('graph.obj', 'rb'), 'application/obj')),
+            ('file_model', ('graph.mtl', open('graph.mtl', 'rb'), 'application/mtl'))
         ]
     except FileNotFoundError as e:
         print(f"File not found: {e}")
