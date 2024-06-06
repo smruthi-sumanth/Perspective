@@ -8,8 +8,8 @@ from gridfs import GridFS
 app = Flask(__name__)
 
 # Configure MongoDB
-mongo_uri = "mongodb+srv://shreyasaloniss2206:dFQqtH1M9LrcxAAn@perspective.j0bfapw.mongodb.net/"
-database_name = "WolframeData"
+mongo_uri = MONGO_URI
+database_name = DATABASE
 mongo_client = MongoClient(mongo_uri)
 db = mongo_client[database_name]
 grid_fs = GridFS(db)
@@ -69,8 +69,8 @@ def export_3d_plot(equation, x_min, x_max, y_min, y_max, filename):
 def sendToEcho3D(filename):
     url = "https://api.echo3d.com/upload"
     payload = {
-        'key': 'crimson-dream-2289',
-        'email': 'ashithashetty2402@gmail.com',
+        'key': API_KEY
+        'email': EMAIL_ID
         'target_type': 2,
         'hologram_type': 2,
         'type': 'upload',
