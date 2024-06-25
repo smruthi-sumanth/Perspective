@@ -33,7 +33,6 @@ perspective
 - Python 3.7+
 - MongoDB
 - WolframScript
-- Node.js (for Echo3D integration)
 
 ### Steps
 
